@@ -1,0 +1,23 @@
+{
+  "name": "pg-dump-example",
+  "version": "1.0.0",
+  "description": "```sh git clone git@github.com:hexlet-components/pg-dump-example.git cd pg-dump-example make ```",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlet-components/pg-dump-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexlet-components/pg-dump-example/issues"
+  },
+  "homepage": "https://github.com/hexlet-components/pg-dump-example#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "knex": "^0.15.2"
+  }
+}
