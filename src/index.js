@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const knex = require('knex');
 const faker = require('faker');
 const fs = require('fs');
@@ -7,6 +8,7 @@ const buildUser = () => ({
   birthday: faker.date.past(),
   email: faker.internet.email(),
   first_name: faker.name.firstName(),
+  password_digest: crypto.createHash('sha256').digest('hex'),
   created_at: faker.date.recent(),
 });
 
@@ -16,7 +18,7 @@ const createSqlForTable = (client, name, generate) => {
     const user = client(name).insert(generate()).toString();
     result.push(user);
   }
-  fs.writeFileSync(`${name}.sql`, result.join('\n'));
+  fs.writeFileSync(`${name}.sql`, result.join(';\n'));
 };
 
 module.exports = () => {
