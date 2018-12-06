@@ -10,17 +10,19 @@ generate:
 	node ./bin/load.js
 
 db-reset:
-	dropdb hexlet
+	dropdb hexlet || true
 	createdb hexlet
 
 db-create:
 	createdb hexlet
 
+dev-setup: db-reset schema-load data-load
+
 dev-docker-build:
 	docker build . -t pg-dump-example
 
 dev-docker-init:
-	docker rm pg-dump-example
+	docker rm pg-dump-example || true
 	docker run --name pg-dump-example -v `pwd`:/pg-dump-example pg-dump-example
 
 dev-docker-attach:
