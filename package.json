@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hexlet-components/pg-dump-example#readme",
   "dependencies": {
     "faker": "^4.1.0",
-    "knex": "^0.15.2"
+    "knex": "^0.15.2",
+    "lodash": "^4.17.11"
   }
 }

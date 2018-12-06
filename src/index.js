@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const _ = require('lodash');
 const knex = require('knex');
 const faker = require('faker');
 const fs = require('fs');
@@ -7,6 +8,7 @@ const buildUser = () => ({
   username: faker.internet.userName(),
   birthday: faker.date.past(),
   email: faker.internet.email(),
+  gender: _.sample(['male', 'female']),
   first_name: faker.name.firstName(),
   password_digest: crypto.createHash('sha256').digest('hex'),
   created_at: faker.date.recent(),
