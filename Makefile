@@ -1,10 +1,11 @@
-all: schema-load data-load
+all: db-reset schema-load data-load
 
 schema-load:
 	psql hexlet < schema.sql
 
 data-load:
 	psql hexlet < users.sql
+	psql hexlet < topics.sql
 
 generate:
 	node ./bin/load.js
