@@ -11,6 +11,7 @@ const buildUser = ({ id }) => ({
   email: faker.internet.email(),
   gender: _.sample(['male', 'female']),
   first_name: faker.name.firstName(),
+  last_name: faker.name.lastName(),
   password_digest: crypto.createHash('sha256').digest('hex'),
   created_at: faker.date.recent(),
 });

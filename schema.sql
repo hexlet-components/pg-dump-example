@@ -8,6 +8,7 @@ CREATE TABLE users (
   gender VARCHAR(255) NOT NULL,
   password_digest VARCHAR(255) NOT NULL,
   first_name VARCHAR(50),
+  last_name VARCHAR(50),
   created_at TIMESTAMP NOT NULL
 );
 
