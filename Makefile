@@ -1,4 +1,4 @@
-all: db-reset schema-load data-load
+all: schema-load data-load
 
 schema-load:
 	psql hexlet < schema.sql
