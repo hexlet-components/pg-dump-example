@@ -1,9 +1,11 @@
-### Requirements
+# pg-dump-example
+
+## Requirements
 
 * Created db `hexlet`
 * Created role with name of your system user
 
-### Install
+## Install
 
 ```sh
 git clone https://github.com/hexlet-components/pg-dump-example.git

@@ -39,7 +39,7 @@ const createSqlForTable = (client) => {
   }
 
   _.forEach(result, (rows, tableName) => {
-    const sql = rows.map(row => client(tableName).insert(row).toString());
+    const sql = rows.map((row) => client(tableName).insert(row).toString());
     fs.writeFileSync(`${tableName}.sql`, sql.join(';\n'));
   });
 };
