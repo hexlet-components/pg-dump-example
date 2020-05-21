@@ -29,5 +29,8 @@ dev-docker-init:
 dev-docker-attach:
 	docker exec -it -w /pg-dump-example -u postgres pg-dump-example bash
 
+install:
+	npm install
+
 lint:
 	npx eslint .
