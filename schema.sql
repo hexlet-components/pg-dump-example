@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
   id bigint PRIMARY KEY,
@@ -12,7 +13,6 @@ CREATE TABLE users (
   created_at TIMESTAMP NOT NULL
 );
 
-DROP TABLE IF EXISTS topics;
 CREATE TABLE topics (
   id bigint PRIMARY KEY,
   user_id bigint REFERENCES users(id) NOT NULL,
