@@ -24,7 +24,7 @@ dev-docker-build:
 
 dev-docker-init:
 	docker rm pg-dump-example || true
-	docker run --name pg-dump-example -v `pwd`:/pg-dump-example pg-dump-example
+	docker run -e POSTGRES_PASSWORD=password --name pg-dump-example -v `pwd`:/pg-dump-example pg-dump-example
 
 dev-docker-attach:
 	docker exec -it -w /pg-dump-example -u postgres pg-dump-example bash
