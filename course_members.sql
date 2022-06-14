@@ -1,102 +1,49 @@
-INSERT INTO "course_members" ("id", "user_id", "course_id", "created_at")
-VALUES
-  (1,3,3,'2022-02-21 23:27:32'),
-  (2,82,15,'2022-12-10 10:12:38'),
-  (3,33,3,'2022-08-30 23:49:19'),
-  (4,28,68,'2021-12-18 19:10:15'),
-  (5,87,76,'2021-12-08 15:45:44'),
-  (6,57,5,'2021-11-07 11:14:33'),
-  (7,89,79,'2022-07-23 14:12:40'),
-  (8,90,77,'2023-01-21 03:15:13'),
-  (9,89,38,'2022-04-15 14:04:29'),
-  (10,70,70,'2021-09-15 18:19:08'),
-  (11,3,18,'2023-03-10 16:59:27'),
-  (12,88,70,'2023-02-18 15:17:38'),
-  (13,63,29,'2021-09-25 03:46:21'),
-  (14,90,17,'2021-10-25 00:42:19'),
-  (15,46,75,'2023-03-31 00:32:08'),
-  (16,90,36,'2021-11-21 07:23:31'),
-  (17,62,15,'2023-02-26 14:03:26'),
-  (18,22,10,'2023-01-27 03:31:24'),
-  (19,38,40,'2021-11-15 10:32:41'),
-  (20,9,71,'2022-08-20 18:25:41'),
-  (21,83,46,'2022-03-29 13:45:40'),
-  (22,42,56,'2021-10-25 07:48:23'),
-  (23,57,76,'2022-05-19 08:46:55'),
-  (24,64,28,'2023-05-16 20:24:18'),
-  (25,83,38,'2021-08-03 20:38:33'),
-  (26,65,11,'2022-01-06 13:41:31'),
-  (27,80,69,'2022-09-30 04:19:38'),
-  (28,57,40,'2023-05-19 01:26:56'),
-  (29,9,69,'2022-02-15 10:32:59'),
-  (30,63,83,'2022-11-07 00:21:16'),
-  (31,36,74,'2023-04-09 14:07:25'),
-  (32,34,67,'2022-02-26 16:49:43'),
-  (33,57,16,'2022-05-17 11:13:55'),
-  (34,16,6,'2022-12-06 09:21:10'),
-  (35,87,37,'2022-04-01 23:44:48'),
-  (36,33,5,'2022-09-15 12:24:07'),
-  (37,90,3,'2021-10-19 20:02:54'),
-  (38,32,15,'2021-11-19 04:52:10'),
-  (39,86,88,'2023-05-28 13:56:45'),
-  (40,58,86,'2022-11-05 04:25:07'),
-  (41,59,94,'2022-06-10 13:41:21'),
-  (42,43,68,'2021-08-17 08:31:35'),
-  (43,98,83,'2022-05-12 00:12:05'),
-  (44,62,60,'2022-11-09 14:33:03'),
-  (45,52,65,'2021-07-04 06:10:41'),
-  (46,22,96,'2022-11-27 09:46:42'),
-  (47,7,63,'2022-09-17 13:39:04'),
-  (48,10,73,'2021-11-20 17:21:11'),
-  (49,51,81,'2021-07-15 04:11:02'),
-  (50,37,45,'2023-03-23 08:40:13'),
-  (51,48,59,'2022-06-08 07:45:34'),
-  (52,32,44,'2022-08-24 10:12:24'),
-  (53,41,55,'2023-04-29 10:27:00'),
-  (54,38,9,'2021-06-26 14:09:51'),
-  (55,67,24,'2022-09-28 00:48:58'),
-  (56,73,51,'2023-03-30 09:47:58'),
-  (57,74,1,'2021-08-21 12:07:11'),
-  (58,61,68,'2022-08-25 09:29:41'),
-  (59,50,66,'2023-04-06 02:20:32'),
-  (60,64,8,'2022-09-03 06:49:57'),
-  (61,35,11,'2023-05-13 00:02:50'),
-  (62,22,13,'2022-03-20 05:57:03'),
-  (63,71,78,'2021-09-11 20:44:30'),
-  (64,77,45,'2022-04-29 12:26:03'),
-  (65,28,21,'2022-01-28 02:29:11'),
-  (66,34,3,'2022-05-21 11:54:28'),
-  (67,8,31,'2021-12-15 07:04:40'),
-  (68,60,2,'2022-04-30 23:59:39'),
-  (69,25,27,'2022-04-23 18:27:33'),
-  (70,98,20,'2023-05-13 13:36:02'),
-  (71,41,19,'2022-01-12 06:57:58'),
-  (72,71,6,'2022-07-25 17:50:21'),
-  (73,60,85,'2023-04-28 18:18:59'),
-  (74,81,49,'2023-01-18 08:05:33'),
-  (75,21,61,'2021-08-12 16:15:57'),
-  (76,65,2,'2022-12-21 17:46:02'),
-  (77,50,68,'2022-10-06 14:43:19'),
-  (78,25,76,'2022-05-11 01:10:30'),
-  (79,85,24,'2022-07-31 16:36:52'),
-  (80,76,84,'2022-08-08 04:24:49'),
-  (81,69,97,'2022-05-21 11:10:30'),
-  (82,63,5,'2023-03-20 00:23:43'),
-  (83,73,26,'2022-06-27 05:23:05'),
-  (84,52,39,'2022-08-28 12:11:34'),
-  (85,78,28,'2022-09-17 12:09:48'),
-  (86,80,65,'2022-06-12 02:33:15'),
-  (87,84,44,'2022-07-28 06:11:54'),
-  (88,34,57,'2022-01-13 02:20:14'),
-  (89,57,58,'2021-11-19 09:00:56'),
-  (90,51,67,'2021-09-14 10:04:02'),
-  (91,67,28,'2023-01-10 12:38:23'),
-  (92,62,28,'2022-08-21 03:21:01'),
-  (93,24,89,'2022-02-04 22:00:03'),
-  (94,50,45,'2021-08-20 13:02:18'),
-  (95,14,59,'2022-05-10 07:22:29'),
-  (96,23,42,'2022-10-16 06:12:32'),
-  (97,34,94,'2022-08-25 23:16:14'),
-  (98,97,65,'2023-01-20 04:43:24'),
-  (99,32,60,'2023-06-08 06:55:20'),
-  (100,67,48,'2023-03-04 13:17:15');
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (47, '2022-06-14 02:30:14.619', 1, 26);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (48, '2022-06-14 11:29:09.843', 2, 85);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (54, '2022-06-14 17:52:45.628', 3, 37);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (97, '2022-06-14 16:17:37.773', 4, 5);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (69, '2022-06-14 17:27:13.520', 5, 27);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (42, '2022-06-14 18:05:31.080', 6, 85);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (63, '2022-06-14 04:42:46.312', 7, 27);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (28, '2022-06-14 14:13:28.508', 8, 95);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (46, '2022-06-14 01:40:26.224', 9, 19);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (54, '2022-06-14 07:23:40.535', 10, 69);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (54, '2022-06-14 18:59:14.759', 11, 9);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (44, '2022-06-14 19:13:07.303', 12, 30);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (24, '2022-06-14 06:12:30.079', 13, 17);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (69, '2022-06-13 21:04:55.997', 14, 81);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (67, '2022-06-14 01:25:52.992', 15, 38);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (65, '2022-06-14 20:26:30.130', 16, 70);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (15, '2022-06-14 13:21:58.235', 17, 31);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (71, '2022-06-14 06:28:46.954', 18, 43);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (61, '2022-06-14 11:29:56.984', 19, 45);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (69, '2022-06-14 06:04:16.100', 20, 34);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (12, '2022-06-14 11:36:10.374', 21, 4);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (28, '2022-06-14 02:13:26.417', 22, 13);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (95, '2022-06-14 12:29:06.480', 23, 69);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (26, '2022-06-14 13:37:44.497', 24, 76);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (85, '2022-06-14 01:48:24.185', 25, 71);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (48, '2022-06-13 21:28:51.510', 26, 31);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (77, '2022-06-14 16:34:32.318', 27, 55);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (60, '2022-06-14 03:08:14.702', 28, 38);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (99, '2022-06-13 22:03:07.810', 29, 70);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (54, '2022-06-14 08:35:32.800', 30, 63);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (10, '2022-06-14 06:40:23.565', 31, 19);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (75, '2022-06-14 04:43:34.637', 32, 91);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (64, '2022-06-13 23:22:52.901', 33, 84);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (80, '2022-06-14 18:18:09.144', 34, 3);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (51, '2022-06-14 11:30:33.401', 35, 20);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (46, '2022-06-14 19:48:22.587', 36, 50);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (80, '2022-06-14 02:55:56.843', 37, 24);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (78, '2022-06-14 14:42:19.201', 38, 35);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (55, '2022-06-14 12:23:25.912', 39, 2);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (72, '2022-06-14 17:10:18.164', 40, 48);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (23, '2022-06-14 19:19:46.007', 41, 5);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (53, '2022-06-14 19:32:16.823', 42, 53);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (12, '2022-06-13 21:41:33.465', 43, 65);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (22, '2022-06-14 12:41:34.198', 44, 25);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (96, '2022-06-14 00:04:12.221', 45, 23);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (54, '2022-06-14 13:50:41.333', 46, 80);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (59, '2022-06-14 03:52:36.104', 47, 99);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (2, '2022-06-14 10:48:45.491', 48, 5);
+insert into "course_members" ("course_id", "created_at", "id", "user_id") values (59, '2022-06-14 19:56:58.350', 49, 82)
