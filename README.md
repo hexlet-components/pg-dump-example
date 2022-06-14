@@ -5,15 +5,17 @@
 
 ## Requirements
 
-* Created db `hexlet`
-* Created role with name of your system user
+* Installed PostgreSQL and Git
+* Created database with name `hexlet`
+* Created role with name of your system user ([link](https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2))
 
 ## Install
 
-```sh
+```bash
 git clone https://github.com/hexlet-components/pg-dump-example.git
 cd pg-dump-example
-make # look at the Makefile
+# load schema and insert data
+make # see Makefile for details
 ```
 
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=pg-dump-example)
