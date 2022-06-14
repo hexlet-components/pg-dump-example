@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const _ = require('lodash');
 const knex = require('knex');
-const faker = require('faker');
+const { faker } = require('@faker-js/faker');
 const fs = require('fs');
 
 const buildUser = ({ id }) => ({
@@ -24,8 +24,27 @@ const buildTopic = ({ id, user }) => ({
   created_at: faker.date.recent(),
 });
 
+const buildCourse = ({ id }) => ({
+  id,
+  name: faker.lorem.words(),
+  body: faker.lorem.text(),
+  created_at: faker.date.recent(),
+});
+
+const buildCourseMember = ({ id, user, course }) => ({
+  id,
+  user_id: user.id,
+  course_id: course.id,
+  created_at: faker.date.recent(),
+});
+
 const createSqlForTable = (client) => {
-  const result = { users: [], topics: [] };
+  const result = {
+    users: [],
+    topics: [],
+    courses: [],
+    course_members: [],
+  };
 
   for (let i = 1; i < 100; i += 1) {
     const user = buildUser({ id: i });
@@ -36,6 +55,18 @@ const createSqlForTable = (client) => {
     const user = _.sample(result.users);
     const topic = buildTopic({ user, id: i });
     result.topics.push(topic);
+  }
+
+  for (let i = 1; i < 100; i += 1) {
+    const course = buildCourse({ id: i });
+    result.courses.push(course);
+  }
+
+  for (let i = 1; i < 50; i += 1) {
+    const user = _.sample(result.users);
+    const course = _.sample(result.courses);
+    const item = buildCourseMember({ id: i, user, course });
+    result.course_members.push(item);
   }
 
   _.forEach(result, (rows, tableName) => {
