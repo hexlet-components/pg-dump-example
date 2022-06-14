@@ -22,15 +22,15 @@ CREATE TABLE topics (
 );
 
 CREATE TABLE courses (
-    id bigint PRIMARY KEY,
-    name varchar(255),
-    body text,
-    created_at timestamp
+  id bigint PRIMARY KEY,
+  name varchar(255),
+  body text,
+  created_at timestamp
 );
 
 CREATE TABLE course_members (
-    id bigint PRIMARY KEY,
-    user_id bigint REFERENCES users(id) NOT NULL,
-    course_id bigint REFERENCES courses(id) NOT NULL,
-    created_at timestamp
+  id bigint PRIMARY KEY,
+  user_id bigint REFERENCES users(id) NOT NULL,
+  course_id bigint REFERENCES courses(id) NOT NULL,
+  created_at timestamp
 );
