@@ -6,6 +6,8 @@ schema-load:
 data-load:
 	psql hexlet < users.sql
 	psql hexlet < topics.sql
+	psql hexlet < courses.sql
+	psql hexlet < course_members.sql
 
 generate:
 	node ./bin/load.js
