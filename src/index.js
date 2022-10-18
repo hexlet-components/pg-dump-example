@@ -1,3 +1,5 @@
+// @ts-check
+
 const crypto = require('crypto');
 const _ = require('lodash');
 const knex = require('knex');

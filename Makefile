@@ -1,4 +1,4 @@
-all: schema-load data-load
+all: db-create schema-load data-load
 
 schema-load:
 	psql hexlet < schema.sql
@@ -17,9 +17,14 @@ db-reset:
 	createdb hexlet
 
 db-create:
-	createdb hexlet
+	createdb hexlet || echo 'skip'
+
+connect:
+	psql -d hexlet
 
 dev-setup: db-reset schema-load data-load
+
+dev-docker-setup: dev-docker-build dev-docker-init
 
 dev-docker-build:
 	docker build . -t pg-dump-example
