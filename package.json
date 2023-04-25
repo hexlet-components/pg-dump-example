@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "```sh git clone git@github.com:hexlet-components/pg-dump-example.git cd pg-dump-example make ```",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

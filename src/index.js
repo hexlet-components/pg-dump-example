@@ -1,10 +1,10 @@
 // @ts-check
 
-const crypto = require('crypto');
-const _ = require('lodash');
-const knex = require('knex');
-const { faker } = require('@faker-js/faker');
-const fs = require('fs');
+import crypto from 'crypto';
+import _ from 'lodash';
+import knex from 'knex';
+import { faker } from '@faker-js/faker';
+import fs from 'fs';
 
 const buildUser = ({ id }) => ({
   id,
