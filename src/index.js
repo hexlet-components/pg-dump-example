@@ -40,12 +40,22 @@ const buildCourseMember = ({ id, user, course }) => ({
   created_at: faker.date.recent(),
 });
 
+const buildCourseReview = ({ id, courseMember, course }) => ({
+  id,
+  course_member_id: courseMember.id,
+  course_id: course.id,
+  spent_minutes: faker.datatype.number({ min: 1, max: 100 }),
+  rating: _.sample([1, 2, 3, 4, 5]),
+  created_at: faker.date.recent(),
+});
+
 const createSqlForTable = (client) => {
   const result = {
     users: [],
     topics: [],
     courses: [],
     course_members: [],
+    course_reviews: [],
   };
 
   for (let i = 1; i < 100; i += 1) {
@@ -67,8 +77,11 @@ const createSqlForTable = (client) => {
   for (let i = 1; i < 50; i += 1) {
     const user = _.sample(result.users);
     const course = _.sample(result.courses);
-    const item = buildCourseMember({ id: i, user, course });
-    result.course_members.push(item);
+    const courseMember = buildCourseMember({ id: i, user, course });
+    result.course_members.push(courseMember);
+
+    const courseReview = buildCourseReview({ id: i, courseMember, course });
+    result.course_reviews.push(courseReview);
   }
 
   _.forEach(result, (rows, tableName) => {
@@ -77,7 +90,7 @@ const createSqlForTable = (client) => {
   });
 };
 
-module.exports = () => {
+export default () => {
   const client = knex({ client: 'pg' });
   createSqlForTable(client);
 };

@@ -8,6 +8,7 @@ data-load:
 	psql hexlet < topics.sql
 	psql hexlet < courses.sql
 	psql hexlet < course_members.sql
+	psql hexlet < course_reviews.sql
 
 generate:
 	node ./bin/load.js
