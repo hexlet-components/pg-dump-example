@@ -39,6 +39,7 @@ CREATE TABLE course_reviews (
   id bigint PRIMARY KEY,
   course_member_id bigint REFERENCES course_members(id) NOT NULL,
   course_id bigint REFERENCES courses(id) NOT NULL,
+  user_id bigint REFERENCES users(id) NOT NULL,
   spent_minutes int NOT NULL,
   rating int,
   created_at timestamp

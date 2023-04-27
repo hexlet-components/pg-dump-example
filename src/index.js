@@ -44,6 +44,7 @@ const buildCourseReview = ({ id, courseMember, course }) => ({
   id,
   course_member_id: courseMember.id,
   course_id: course.id,
+  user_id: courseMember.user_id,
   spent_minutes: faker.datatype.number({ min: 1, max: 100 }),
   rating: _.sample([1, 2, 3, 4, 5]),
   created_at: faker.date.recent(),
