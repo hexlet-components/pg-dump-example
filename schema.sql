@@ -42,5 +42,6 @@ CREATE TABLE course_reviews (
   user_id bigint REFERENCES users(id) NOT NULL,
   spent_minutes int NOT NULL,
   rating int,
+  body text,
   created_at timestamp
 );

@@ -31,6 +31,7 @@ dev-docker-build:
 	docker build . -t pg-dump-example
 
 dev-docker-init:
+	docker stop pg-dump-example || true
 	docker rm pg-dump-example || true
 	docker run -e POSTGRES_PASSWORD=password --name pg-dump-example -v `pwd`:/pg-dump-example pg-dump-example
 
