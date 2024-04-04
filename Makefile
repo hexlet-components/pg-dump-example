@@ -17,6 +17,9 @@ data-load:
 	psql hexlet < data/employees.sql
 	psql hexlet < data/materials_and_colors.sql
 	psql hexlet < data/orders_and_customers.sql
+	psql hexlet < data/normalization/1nf.sql
+	psql hexlet < data/normalization/2nf.sql
+	psql hexlet < data/normalization/3nf.sql
 
 generate:
 	node ./bin/load.js
