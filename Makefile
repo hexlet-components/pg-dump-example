@@ -4,11 +4,19 @@ schema-load:
 	psql hexlet < schema.sql
 
 data-load:
-	psql hexlet < users.sql
-	psql hexlet < topics.sql
-	psql hexlet < courses.sql
-	psql hexlet < course_members.sql
-	psql hexlet < course_reviews.sql
+	psql hexlet < data/users.sql
+	psql hexlet < data/topics.sql
+	psql hexlet < data/courses.sql
+	psql hexlet < data/course_members.sql
+	psql hexlet < data/course_reviews.sql
+
+	psql hexlet < data/authors.sql
+	psql hexlet < data/books.sql
+	psql hexlet < data/departments.sql
+	psql hexlet < data/drivers_passengers_rides.sql
+	psql hexlet < data/employees.sql
+	psql hexlet < data/materials_and_colors.sql
+	psql hexlet < data/orders_and_customers.sql
 
 generate:
 	node ./bin/load.js

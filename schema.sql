@@ -82,7 +82,9 @@ CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     department_id INT,
     name VARCHAR(50),
-    salary DECIMAL(10, 2)
+    salary DECIMAL(10, 2),
+    position VARCHAR,
+    manager_id int
 );
 
 CREATE TABLE drivers (
@@ -98,7 +100,7 @@ CREATE TABLE passengers (
 );
 
 CREATE TABLE rides (
-    rideid INT PRIMARY KEY,
+    ride_id INT PRIMARY KEY,
     driver_id INT,
     passenger_id INT,
     price DECIMAL(10, 2),
@@ -116,9 +118,4 @@ CREATE TABLE orders (
     order_id INT PRIMARY KEY,
     customer_id INT,
     total_price DECIMAL(10, 2)
-);
-
-CREATE TABLE employees_with_managers (
-    employee_id INT PRIMARY KEY,
-    employee_name VARCHAR,
 );
