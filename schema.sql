@@ -147,3 +147,22 @@ CREATE TABLE order_items_2nf (
     good_id	INT,
     price	NUMERIC
 );
+
+CREATE TABLE users_3nf (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255)
+);
+
+CREATE TABLE goods_3nf (
+    id	INT PRIMARY KEY,
+    name	VARCHAR(255),
+    price	NUMERIC
+);
+
+CREATE TABLE order_items_3nf (
+    id	INT PRIMARY KEY,
+    user_id	INT,
+    address	VARCHAR(255),
+    good_id	INT
+);
