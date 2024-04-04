@@ -119,3 +119,31 @@ CREATE TABLE orders (
     customer_id INT,
     total_price DECIMAL(10, 2)
 );
+
+CREATE TABLE order_items_1nf (
+    id bigint PRIMARY KEY,
+    first_name varchar(255),
+    last_name varchar(255),
+    address varchar(255),
+    item varchar(255),
+    price numeric
+);
+
+CREATE TABLE users_2nf (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255)
+);
+
+CREATE TABLE goods_2nf (
+    id	INT PRIMARY KEY,
+    name	VARCHAR(255)
+);
+
+CREATE TABLE order_items_2nf (
+    id	INT PRIMARY KEY,
+    user_id	INT,
+    address	VARCHAR(255),
+    good_id	INT,
+    price	NUMERIC
+);
