@@ -45,3 +45,80 @@ CREATE TABLE course_reviews (
   body text,
   created_at timestamp
 );
+
+CREATE TABLE colors (
+    color_id INT PRIMARY KEY,
+    color_name VARCHAR(50)
+);
+
+CREATE TABLE materials (
+    material_id INT PRIMARY KEY,
+    material_name VARCHAR(50)
+);
+
+CREATE TABLE authors (
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(50),
+    origin VARCHAR(50)
+);
+
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    author_id INT,
+    title VARCHAR(100),
+    language VARCHAR(50),
+    genre VARCHAR(50),
+    age_rating VARCHAR(5),
+    users_score DECIMAL(3, 1)
+);
+
+CREATE TABLE departments (
+    department_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    department_id INT,
+    name VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+CREATE TABLE drivers (
+    driver_id INT PRIMARY KEY,
+    driver_name VARCHAR(50),
+    phone VARCHAR(15)
+);
+
+CREATE TABLE passengers (
+    passenger_id INT PRIMARY KEY,
+    passenger_name VARCHAR(50),
+    phone VARCHAR(15)
+);
+
+CREATE TABLE rides (
+    rideid INT PRIMARY KEY,
+    driver_id INT,
+    passenger_id INT,
+    price DECIMAL(10, 2),
+    FOREIGN KEY (driver_id) REFERENCES drivers(driver_id),
+    FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id)
+);
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    email VARCHAR(50)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    total_price DECIMAL(10, 2)
+);
+
+CREATE TABLE employees_with_managers (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR,
+);
