@@ -20,7 +20,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "knex": "^2.4.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.23"
   },
   "devDependencies": {
     "eslint": "^8.25.0",
