@@ -53,4 +53,7 @@ install:
 	npm install
 
 lint:
-	npx eslint .
+	npx biome check .
+
+lint-fix:
+	npx biome check --write .
