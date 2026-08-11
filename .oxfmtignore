@@ -1,0 +1,24 @@
+# Что oxfmt не форматирует. Файл нужен потому, что без --ignore-path oxfmt читает
+# .gitignore текущего каталога, а в ките в .gitignore лежат exercises/, courses/ и
+# projects/ целиком: запущенный из корня oxfmt тогда молча пропускает весь контент,
+# и это неотличимо от «всё уже отформатировано».
+#
+# Список повторяет ignorePatterns из .oxlintrc.json: линт и формат должны видеть
+# одни и те же файлы.
+node_modules/
+# oxfmt форматирует не только js/ts: на spec.yml упражнения он снимает пустую
+# строку, а package.json переписывает в свой вид. YAML и JSON в ките ведут другие
+# инструменты (yamlfmt через mdsf, npm сам), поэтому здесь только js/ts.
+*.yml
+*.yaml
+*.json
+*.jsonc
+*.css
+*.md
+npm-cache/
+vendor/
+dist/
+build/
+coverage/
+.venv/
+__snapshots__/
