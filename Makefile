@@ -50,10 +50,14 @@ dev-docker-attach:
 	docker exec -it -w /pg-dump-example -u postgres pg-dump-example bash
 
 install:
-	npm install
+	pnpm install
 
 lint:
-	npx biome check .
+	pnpm --silent run lint
+	pnpm --silent run format:check
 
 lint-fix:
-	npx biome check --write .
+	pnpm --silent run lint:fix
+
+test:
+	pnpm --silent test

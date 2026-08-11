@@ -1,5 +1,7 @@
 name: Node CI
 
+# На каждое событие ровно один workflow: здесь нет release-please, поэтому
+# main проверяет Node CI.
 on:
   push:
     branches:
@@ -14,17 +16,25 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ['26.x']
+        node-version: [26.x]
 
     steps:
       - uses: actions/checkout@v7
-      - name: Use Node.js with ${{ matrix.node-version }}
+
+      # pnpm ставится до setup-node: тот с cache: pnpm ищет уже существующий
+      # бинарь, чтобы вычислить путь к store, и иначе падает с
+      # «Unable to locate executable file: pnpm».
+      - uses: pnpm/action-setup@v6
+
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
+          cache: pnpm
 
       - name: Install
         run: make install
       - name: Run linter
         run: make lint
+      - name: Run tests
+        run: make test
