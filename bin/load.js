@@ -1,3 +1,3 @@
-import load from '../src/index.js';
+import load from "../src/index.js";
 
 load();

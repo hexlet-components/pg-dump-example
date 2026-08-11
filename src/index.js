@@ -1,20 +1,20 @@
 // @ts-check
 
-import crypto from 'node:crypto';
-import fs from 'node:fs';
-import { faker } from '@faker-js/faker';
-import knex from 'knex';
-import _ from 'lodash';
+import crypto from "node:crypto";
+import fs from "node:fs";
+import { faker } from "@faker-js/faker";
+import knex from "knex";
+import _ from "lodash";
 
 const buildUser = ({ id }) => ({
   id,
   username: faker.internet.userName(),
   birthday: faker.date.past(),
   email: faker.internet.email(),
-  gender: _.sample(['male', 'female']),
+  gender: _.sample(["male", "female"]),
   first_name: faker.name.firstName(),
   last_name: faker.name.lastName(),
-  password_digest: crypto.createHash('sha256').digest('hex'),
+  password_digest: crypto.createHash("sha256").digest("hex"),
   created_at: faker.date.recent(),
 });
 
@@ -88,11 +88,11 @@ const createSqlForTable = (client) => {
 
   _.forEach(result, (rows, tableName) => {
     const sql = rows.map((row) => client(tableName).insert(row).toString());
-    fs.writeFileSync(`${tableName}.sql`, sql.join(';\n'));
+    fs.writeFileSync(`${tableName}.sql`, sql.join(";\n"));
   });
 };
 
 export default () => {
-  const client = knex({ client: 'pg' });
+  const client = knex({ client: "pg" });
   createSqlForTable(client);
 };
