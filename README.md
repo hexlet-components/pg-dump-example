@@ -3,6 +3,14 @@
 [![github action status](https://github.com/hexlet-components/pg-dump-example/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/pg-dump-example/actions)
 
 
+## Зачем это нужно
+
+База с реальными данными для курсов по SQL: пользователи, курсы, заказы,
+сотрудники, а также схемы под разбор нормализации (1NF, 2NF, 3NF).
+
+Нужна, чтобы писать запросы к чему-то осмысленному, а не к таблице из трёх
+строк. Разворачивается одной командой локально или в докере.
+
 ## Requirements
 
 * Installed PostgreSQL and Git
