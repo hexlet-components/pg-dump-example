@@ -2,7 +2,6 @@
 
 [![github action status](https://github.com/hexlet-components/pg-dump-example/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/pg-dump-example/actions)
 
-
 ## Зачем это нужно
 
 База с реальными данными для курсов по SQL: пользователи, курсы, заказы,
@@ -13,9 +12,9 @@
 
 ## Requirements
 
-* Installed PostgreSQL and Git
-* Created database with name `hexlet`
-* Created role with name of your system user ([link](https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2))
+- Installed PostgreSQL and Git
+- Created database with name `hexlet`
+- Created role with name of your system user ([roles and grant permissions in PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-manage-grant-permissions-in-postgresql-on-a-vps-2))
 
 ## Install
 
