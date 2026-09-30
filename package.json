@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "lint": "oxlint --config=.oxlintrc.json .",
+    "lint": "oxlint .",
     "test": "vitest run --passWithNoTests",
-    "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --config=.oxlintrc.json --fix .",
+    "lint:fix": "oxfmt --ignore-path=.oxfmtignore . && oxlint --fix .",
     "format": "oxfmt --ignore-path=.oxfmtignore .",
     "format:check": "oxfmt --ignore-path=.oxfmtignore --check ."
   },
