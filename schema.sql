@@ -1,49 +1,49 @@
 DROP TABLE IF EXISTS topics;
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-  id bigint PRIMARY KEY,
-  username VARCHAR(50) UNIQUE NOT NULL,
-  birthday DATE,
-  email_confirmed BOOLEAN,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  gender VARCHAR(255) NOT NULL,
-  password_digest VARCHAR(255) NOT NULL,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50),
-  created_at TIMESTAMP NOT NULL
+    id BIGINT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    birthday DATE,
+    email_confirmed BOOLEAN,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    gender VARCHAR(255) NOT NULL,
+    password_digest VARCHAR(255) NOT NULL,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE topics (
-  id bigint PRIMARY KEY,
-  user_id bigint REFERENCES users(id) NOT NULL,
-  title varchar(255),
-  body text,
-  created_at TIMESTAMP NOT NULL
+    id BIGINT PRIMARY KEY,
+    user_id BIGINT REFERENCES users(id) NOT NULL,
+    title VARCHAR(255),
+    body TEXT,
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE courses (
-  id bigint PRIMARY KEY,
-  name varchar(255),
-  body text,
-  created_at timestamp
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(255),
+    body TEXT,
+    created_at TIMESTAMP
 );
 
 CREATE TABLE course_members (
-  id bigint PRIMARY KEY,
-  user_id bigint REFERENCES users(id) NOT NULL,
-  course_id bigint REFERENCES courses(id) NOT NULL,
-  created_at timestamp
+    id BIGINT PRIMARY KEY,
+    user_id BIGINT REFERENCES users(id) NOT NULL,
+    course_id BIGINT REFERENCES courses(id) NOT NULL,
+    created_at TIMESTAMP
 );
 
 CREATE TABLE course_reviews (
-  id bigint PRIMARY KEY,
-  course_member_id bigint REFERENCES course_members(id) NOT NULL,
-  course_id bigint REFERENCES courses(id) NOT NULL,
-  user_id bigint REFERENCES users(id) NOT NULL,
-  spent_minutes int NOT NULL,
-  rating int,
-  body text,
-  created_at timestamp
+    id BIGINT PRIMARY KEY,
+    course_member_id BIGINT REFERENCES course_members(id) NOT NULL,
+    course_id BIGINT REFERENCES courses(id) NOT NULL,
+    user_id BIGINT REFERENCES users(id) NOT NULL,
+    spent_minutes INT NOT NULL,
+    rating INT,
+    body TEXT,
+    created_at TIMESTAMP
 );
 
 CREATE TABLE colors (
@@ -84,7 +84,7 @@ CREATE TABLE employees (
     name VARCHAR(50),
     salary DECIMAL(10, 2),
     position VARCHAR,
-    manager_id int
+    manager_id INT
 );
 
 CREATE TABLE drivers (
@@ -121,12 +121,12 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE order_items_1nf (
-    id bigint PRIMARY KEY,
-    first_name varchar(255),
-    last_name varchar(255),
-    address varchar(255),
-    item varchar(255),
-    price numeric
+    id BIGINT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    address VARCHAR(255),
+    item VARCHAR(255),
+    price NUMERIC
 );
 
 CREATE TABLE users_2nf (
@@ -136,16 +136,16 @@ CREATE TABLE users_2nf (
 );
 
 CREATE TABLE goods_2nf (
-    id	INT PRIMARY KEY,
-    name	VARCHAR(255)
+    id INT PRIMARY KEY,
+    name VARCHAR(255)
 );
 
 CREATE TABLE order_items_2nf (
-    id	INT PRIMARY KEY,
-    user_id	INT,
-    address	VARCHAR(255),
-    good_id	INT,
-    price	NUMERIC
+    id INT PRIMARY KEY,
+    user_id INT,
+    address VARCHAR(255),
+    good_id INT,
+    price NUMERIC
 );
 
 CREATE TABLE users_3nf (
@@ -155,14 +155,14 @@ CREATE TABLE users_3nf (
 );
 
 CREATE TABLE goods_3nf (
-    id	INT PRIMARY KEY,
-    name	VARCHAR(255),
-    price	NUMERIC
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    price NUMERIC
 );
 
 CREATE TABLE order_items_3nf (
-    id	INT PRIMARY KEY,
-    user_id	INT,
-    address	VARCHAR(255),
-    good_id	INT
+    id INT PRIMARY KEY,
+    user_id INT,
+    address VARCHAR(255),
+    good_id INT
 );
