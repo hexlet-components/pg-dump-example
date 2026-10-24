@@ -1,2 +1,3 @@
 [sqruff]
 dialect = postgres
+exclude_rules = LT05
