@@ -1,0 +1,3 @@
+[files]
+# Сгенерированные тестовые данные (lorem ipsum).
+extend-exclude = ["data/**"]

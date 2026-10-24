@@ -2,5 +2,29 @@
 # задаёт packageManager в package.json: pnpm сам переключается на неё и
 # записывает её в лок, поэтому здесь только мажор.
 [tools]
+betterleaks = "latest"
+"github:quarylabs/sqruff" = "latest"
+hadolint = "latest"
+hk = "2"
+jactionlint = "latest"
+lychee = "latest"
 node = "26"
+"npm:@commitlint/cli" = "latest"
+"npm:@commitlint/config-conventional" = "latest"
+osv-scanner = "latest"
+pkl = "latest"
 pnpm = "12"
+rumdl = "latest"
+typos = "latest"
+
+[tasks.setup]
+description = "Поставить зависимости и git-хуки"
+run = ["pnpm install", "hk install"]
+
+[tasks.check]
+description = "Все проверки, тот же набор, что гоняет CI"
+run = "hk check --all"
+
+[tasks.fix]
+description = "Применить автоисправления"
+run = "hk fix --all"
